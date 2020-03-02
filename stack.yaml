@@ -1,0 +1,23 @@
+resolver: lts-8.20
+extra-deps: ["vect-0.4.7"]
+packages: 
+- "."
+- location:
+    git: https://github.com/urs-of-the-backwoods/fresco.git
+    commit: 857234c
+  subdirs:
+  - haskell-binding
+  extra-dep: true
+- location:
+    git: https://github.com/urs-of-the-backwoods/HGamer3D.git
+    commit: 301727b
+  subdirs:
+  - src
+  extra-dep: true
+- location:
+    git: https://github.com/well-typed/binary-serialise-cbor.git
+    commit: c617075
+  extra-dep: true
+flags:
+  binary-serialise-cbor:
+    newtime15: true

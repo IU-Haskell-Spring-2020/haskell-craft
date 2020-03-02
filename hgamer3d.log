@@ -1,0 +1,32 @@
+[Mon Mar  2 18:48:01 2020] INFO: Opened log file hgamer3d.log
+[Mon Mar  2 18:48:01 2020] INFO: Created 1 worker thread
+[Mon Mar  2 18:48:01 2020] INFO: Added resource path /home/alex/.aio/impl/2f61b831794b427c416c77ec3f52a49e7cf0115f.i/bin/Data/
+[Mon Mar  2 18:48:01 2020] INFO: Added resource path /home/alex/.aio/impl/2f61b831794b427c416c77ec3f52a49e7cf0115f.i/bin/CoreData/
+[Mon Mar  2 18:48:01 2020] INFO: Added resource path /home/alex/.aio/impl/2f61b831794b427c416c77ec3f52a49e7cf0115f.i/bin/Autoload/LargeData/
+[Mon Mar  2 18:48:01 2020] INFO: Set screen mode 800x600 windowed monitor 17585744 resizable multisample 2
+[Mon Mar  2 18:48:01 2020] INFO: Initialized input
+[Mon Mar  2 18:48:01 2020] INFO: Initialized user interface
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Textures/Ramp.png
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading temporary resource Textures/Ramp.xml
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Textures/Spot.png
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading temporary resource Textures/Spot.xml
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Techniques/NoTexture.xml
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource RenderPaths/Forward.xml
+[Mon Mar  2 18:48:01 2020] INFO: Initialized renderer
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading temporary resource Textures/Ramp.xml
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading temporary resource Textures/Spot.xml
+[Mon Mar  2 18:48:01 2020] INFO: Set audio mode 22050 Hz stereo interpolated
+[Mon Mar  2 18:48:01 2020] INFO: Initialized engine
+[Mon Mar  2 18:48:01 2020] INFO: Added resource path /home/alex/.aio/impl/e9ffdbfd5fc3786b7178e3f3aceeeb297e9358ea.i/
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource UI/DefaultStyle.xml
+[Mon Mar  2 18:48:01 2020] DEBUG: Window was moved to 560,277
+[Mon Mar  2 18:48:01 2020] DEBUG: Reloading shaders
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Materials/Pattern_45.xml
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Techniques/DiffNormal.xml
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Textures/pattern_45_diffus.tga
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Textures/pattern_45_normal.tga
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Models/Box.mdl
+[Mon Mar  2 18:48:01 2020] DEBUG: Loading resource Shaders/GLSL/LitSolid.glsl
+[Mon Mar  2 18:48:01 2020] DEBUG: Compiled vertex shader LitSolid(INSTANCED NORMALMAP PERPIXEL POINTLIGHT)
+[Mon Mar  2 18:48:01 2020] DEBUG: Compiled pixel shader LitSolid(AMBIENT DIFFMAP NORMALMAP PERPIXEL POINTLIGHT)
+[Mon Mar  2 18:48:01 2020] DEBUG: Linked vertex shader LitSolid(INSTANCED NORMALMAP PERPIXEL POINTLIGHT) and pixel shader LitSolid(AMBIENT DIFFMAP NORMALMAP PERPIXEL POINTLIGHT)

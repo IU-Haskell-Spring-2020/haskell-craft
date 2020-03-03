@@ -43,6 +43,7 @@ mats = [
   ]
 
 --makeCube :: a -> AbsolutePosition -> b
+makeCube :: HG3D -> (Integer, Integer, Integer) -> IO Entity
 makeCube hg3d (x, z, y) = do
   let (x', y', z') = posMap (\n -> fromIntegral n * blockSize) (x, y, z)
   eCube <- newE hg3d [
@@ -65,8 +66,41 @@ updateCamera cam = do
   updateC cam ctOrientation (\c -> (rotU vec3Y (0.0005)) .*. c)
 --  updateC cam ctOrientation (\c -> (rotU vec3Y (-0.001)) .*. c)
   sleepFor (msecT 12)
-  updateCamera cam
 
+--gameLogic hg3d = do
+--  es <- newET hg3d [
+--    "eK" <: [
+--        ctKeyEvent #: NoKeyEvent
+--        ],
+--
+--    "eS" <: [
+--        ctScreenModeEvent #: ScreenModeEvent 0 0 False False
+--        ],
+--
+--     "txt" <: [
+--        ctStaticText #: "",
+--        ctScreenRect #: ScreenRect 10 100 200 35
+--              ],
+--
+--     "txt2" <: [
+--        ctStaticText #: "",
+--        ctScreenRect #: ScreenRect 10 150 200 35
+--              ]
+--     ]
+--
+--  registerCallback hg3d (es # "eK") ctKeyEvent (\evt -> do
+--                                                   setC (es # "txt") ctStaticText ("key event")
+--                                                   setC (es # "txt2") ctStaticText (T.pack (show evt))
+--                                                   return ()
+--                                               )
+--
+--  registerCallback hg3d (es # "eS") ctScreenModeEvent (\evt -> do
+--                                                   setC (es # "txt") ctStaticText ("screen mode event")
+--                                                   setC (es # "txt2") ctStaticText (T.pack (show evt))
+--                                                   return ()
+--                                                 )
+--
+--  return es
 
 gameLogic hg3d = do
     let chunk = sampleChunk
@@ -85,14 +119,19 @@ gameLogic hg3d = do
     -- make cubes
     cubes <- allCubes hg3d allPositions
     forkIO (updateCamera cam)
-    -- create key
---    "wK" <: [
---        ctKeyEvent #: NoKeyEvent
---        ]
-
-    -- registerCallback hg3d wK ctKeyEvent (\evt -> do
-    --                                                 updateC cam ctOrientation (\u -> (rotU vec3X 0.05) .*. u)
-    --                                                 return ()
-    --                                              )
+    
+    -- connect handlers
+    es <- newET hg3d 
+      [
+        "wK" <: 
+          [
+            ctKeyEvent #: NoKeyEvent
+          ]
+      ]
+    
+    registerCallback hg3d (es # "wK") ctKeyEvent (\evt -> do
+        updateC cam ctOrientation (\u -> (rotU vec3X 0.005) .*. u)
+        return ()
+      )
 
     return ()

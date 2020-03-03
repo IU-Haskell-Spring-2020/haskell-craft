@@ -21,7 +21,7 @@ allChunkLevelPoints
   = (,) <$> [0 .. (fromIntegral chunkSize - 1)] <*> [0 .. (fromIntegral chunkSize - 1)]
 
 sampleChunk :: [Block]
-sampleChunk = generateChunk testSeed Normal Mountains  
+sampleChunk = generateChunk testSeed Normal Mountains
 
 testWorldType :: WorldType
 testWorldType = Normal
@@ -44,23 +44,27 @@ generateChunk seed Normal Plains = terrain
     
     calculateHeight x z = toHeight $ noiseValue perlinDist (x, z, fromIntegral seaLevel)
     toHeight noiseVal   = fromIntegral $ floor (noiseVal * 10) + seaLevel
+    makeBlock blockType x z y = Block (x, z, y) blockType
     
     blocks = map (\(x, z) -> (x, z, calculateHeight (fromIntegral x) (fromIntegral z))) allChunkLevelPoints
     
     terrain = map (flip Block Stone) blocks
- 
+
 generateChunk seed Normal Mountains = terrain
   where
-    octaves = 4
-    scale = 1
+    octaves     = 4
+    scale       = 1
     persistence = 0.1
-    perlinDist = Perlin seed octaves scale persistence
-    threshold = 0.5
-    
-    calculateHeight x z = toHeight $ noiseValue perlinDist (x, z, fromIntegral seaLevel)
+    perlinDist  = Perlin seed octaves scale persistence
+    threshold   = 0.5
+
     toHeight noiseVal   = fromIntegral $ floor (noiseVal * 10) + seaLevel
+    calculateHeight x z = toHeight $ noiseValue perlinDist (fromIntegral x, fromIntegral z, fromIntegral seaLevel)
+    makeBlock x z y = Block (x, z, y) Stone
     
-    upperBlocks = map (\(x, z) -> (x, z, calculateHeight (fromIntegral x) (fromIntegral z))) allChunkLevelPoints
+    upperBlocks = map (\(x, z) -> (x, z, calculateHeight (fromIntegral x) (fromIntegral z))) allChunkLevelPoints    
+    makeColumn (x, z, height) = zipWith3 makeBlock (repeat x) (repeat z) [1 .. height]
+    
     terrain = map (flip Block Stone) upperBlocks
 
 flatBedrock :: [Block]

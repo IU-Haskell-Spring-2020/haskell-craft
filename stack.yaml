@@ -1,6 +1,6 @@
 resolver: lts-8.20
 extra-deps: ["vect-0.4.7"]
-packages: 
+packages:
 - "."
 - location:
     git: https://github.com/urs-of-the-backwoods/fresco.git

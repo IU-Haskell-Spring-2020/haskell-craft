@@ -21,7 +21,13 @@ allChunkLevelPoints
   = (,) <$> [0 .. (fromIntegral chunkSize - 1)] <*> [0 .. (fromIntegral chunkSize - 1)]
 
 sampleChunk :: [Block]
-sampleChunk = generateChunk testSeed Flat Plains  
+sampleChunk = generateChunk testSeed Normal Mountains  
+
+testWorldType :: WorldType
+testWorldType = Normal
+
+testBiome :: Biome
+testBiome = Plains
 
 generateChunk :: Seed -> WorldType -> Biome -> [Block]
 generateChunk _ Flat _          = flatBedrock ++ terrain
@@ -30,9 +36,9 @@ generateChunk _ Flat _          = flatBedrock ++ terrain
         
 generateChunk seed Normal Plains = terrain
   where
-    octaves = 4
-    scale = 0.3
-    persistence = 0.5
+    octaves = 5
+    scale = 0.6
+    persistence = 0.1
     perlinDist = Perlin seed octaves scale persistence
     threshold = 0.5
     
@@ -42,7 +48,20 @@ generateChunk seed Normal Plains = terrain
     blocks = map (\(x, z) -> (x, z, calculateHeight (fromIntegral x) (fromIntegral z))) allChunkLevelPoints
     
     terrain = map (flip Block Stone) blocks
-
+ 
+generateChunk seed Normal Mountains = terrain
+  where
+    octaves = 4
+    scale = 1
+    persistence = 0.1
+    perlinDist = Perlin seed octaves scale persistence
+    threshold = 0.5
+    
+    calculateHeight x z = toHeight $ noiseValue perlinDist (x, z, fromIntegral seaLevel)
+    toHeight noiseVal   = fromIntegral $ floor (noiseVal * 10) + seaLevel
+    
+    upperBlocks = map (\(x, z) -> (x, z, calculateHeight (fromIntegral x) (fromIntegral z))) allChunkLevelPoints
+    terrain = map (flip Block Stone) upperBlocks
 
 flatBedrock :: [Block]
 flatBedrock = map (\(x, z) -> Block (x, z, 0) Bedrock) allChunkLevelPoints

@@ -5,5 +5,5 @@ import Graphics
 
 -- main program, running gameLogic with standard configuration
 main = do
-    runGame standardGraphics3DConfig gameLogic (msecT 20)
+    runGame standardGraphics3DConfig gameLogic (msecT 10)
     return ()

@@ -5,6 +5,7 @@ import           Constants
 
 data World = World
     {
+      seed           :: Int,
       spawnBlock     :: RelativePosition,
       chunks         :: [Chunk],
       playerPosition :: AbsolutePosition,
@@ -49,18 +50,9 @@ type AbsolutePosition = (Integer, Integer, Integer)
 posMap :: (Integer -> b) -> AbsolutePosition -> (b, b, b)
 posMap f (x, z, y) = (f x, f z, f y)
 
-chunkSize :: Int
-chunkSize = 16
-
 maxGenerationYLevel :: Biome -> Int
 maxGenerationYLevel Plains = 120
 maxGenerationYLevel Mountains = 210
-
-seaLevel :: Int
-seaLevel = 62
-
-maxYLevel :: Int
-maxYLevel = 255
 
 -- | Given starting position, current chunk, and the position in the current chunk,
 -- calculate the absolute position (bottom corner)

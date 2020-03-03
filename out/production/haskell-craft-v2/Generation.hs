@@ -21,7 +21,7 @@ allChunkLevelPoints
   = (,) <$> [0 .. (fromIntegral chunkSize - 1)] <*> [0 .. (fromIntegral chunkSize - 1)]
 
 sampleChunk :: [Block]
-sampleChunk = generateChunk testSeed Flat Plains  
+sampleChunk = generateChunk testSeed Normal Plains  
 
 generateChunk :: Seed -> WorldType -> Biome -> [Block]
 generateChunk _ Flat _          = flatBedrock ++ terrain

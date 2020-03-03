@@ -61,12 +61,13 @@ gameLogic hg3d = do
     let allPositions = map ((posMap fromIntegral) . (absoluteBlockPosition chunkIndex)) chunk
      
     -- create camera
-    cam <- newE hg3d [
-                ctCamera #: FullViewCamera,
-                ctPosition #: Vec3 1 0 (0.0),
-                ctLight #: Light PointLight 1.0 1000.0 1.0,
-                ctOrientation #: unitU
-                ]
+    cam <- newE hg3d 
+      [
+        ctCamera #: FullViewCamera,
+        ctPosition #: Vec3 1 2 (-10.0),
+        ctLight #: Light PointLight 1.0 1000.0 1.0,
+        ctOrientation #: unitU
+      ]
 
     -- make cubes
     cubes <- allCubes hg3d allPositions

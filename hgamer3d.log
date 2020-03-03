@@ -1,33 +1,36 @@
-[Tue Mar  3 15:20:35 2020] INFO: Opened log file hgamer3d.log
-[Tue Mar  3 15:20:35 2020] INFO: Created 3 worker threads
-[Tue Mar  3 15:20:35 2020] INFO: Added resource path C:/Users/danii/.aio/impl/360d1e9c2b6ab69ff23d021aea0c9d91e1182748.i/bin/Data/
-[Tue Mar  3 15:20:35 2020] INFO: Added resource path C:/Users/danii/.aio/impl/360d1e9c2b6ab69ff23d021aea0c9d91e1182748.i/bin/CoreData/
-[Tue Mar  3 15:20:35 2020] INFO: Added resource path C:/Users/danii/.aio/impl/360d1e9c2b6ab69ff23d021aea0c9d91e1182748.i/bin/Autoload/LargeData/
-[Tue Mar  3 15:20:35 2020] INFO: Created Direct3D9 device
-[Tue Mar  3 15:20:35 2020] INFO: Set screen mode 800x600 windowed monitor 0 resizable multisample 2
-[Tue Mar  3 15:20:35 2020] INFO: Initialized input
-[Tue Mar  3 15:20:35 2020] INFO: Initialized user interface
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Textures/Ramp.png
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading temporary resource Textures/Ramp.xml
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Textures/Spot.png
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading temporary resource Textures/Spot.xml
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Techniques/NoTexture.xml
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource RenderPaths/Forward.xml
-[Tue Mar  3 15:20:35 2020] INFO: Initialized renderer
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading temporary resource Textures/Ramp.xml
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading temporary resource Textures/Spot.xml
-[Tue Mar  3 15:20:35 2020] INFO: Set audio mode 22050 Hz stereo interpolated
-[Tue Mar  3 15:20:35 2020] INFO: Initialized engine
-[Tue Mar  3 15:20:35 2020] INFO: Added resource path C:/Users/danii/.aio/impl/e9ffdbfd5fc3786b7178e3f3aceeeb297e9358ea.i/
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource UI/DefaultStyle.xml
-[Tue Mar  3 15:20:35 2020] DEBUG: Reloading shaders
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Materials/Pattern_125.xml
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Techniques/DiffNormalSpec.xml
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Textures/pattern_125_diffuse.tga
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Textures/pattern_125_normal.tga
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Textures/pattern_125_specular.tga
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Models/Box.mdl
-[Tue Mar  3 15:20:35 2020] DEBUG: Loading resource Shaders/HLSL/LitSolid.hlsl
-[Tue Mar  3 15:20:35 2020] DEBUG: Loaded cached vertex shader LitSolid(NORMALMAP PERPIXEL POINTLIGHT)
-[Tue Mar  3 15:20:35 2020] DEBUG: Loaded cached pixel shader LitSolid(AMBIENT DIFFMAP NORMALMAP PERPIXEL POINTLIGHT SPECMAP SPECULAR)
-[Tue Mar  3 15:20:35 2020] DEBUG: Loaded cached vertex shader LitSolid(INSTANCED NORMALMAP PERPIXEL POINTLIGHT)
+[Tue Mar  3 19:09:06 2020] INFO: Opened log file hgamer3d.log
+[Tue Mar  3 19:09:06 2020] INFO: Created 3 worker threads
+[Tue Mar  3 19:09:06 2020] INFO: Added resource path C:/Users/danii/.aio/impl/360d1e9c2b6ab69ff23d021aea0c9d91e1182748.i/bin/Data/
+[Tue Mar  3 19:09:06 2020] INFO: Added resource path C:/Users/danii/.aio/impl/360d1e9c2b6ab69ff23d021aea0c9d91e1182748.i/bin/CoreData/
+[Tue Mar  3 19:09:06 2020] INFO: Added resource path C:/Users/danii/.aio/impl/360d1e9c2b6ab69ff23d021aea0c9d91e1182748.i/bin/Autoload/LargeData/
+[Tue Mar  3 19:09:06 2020] INFO: Created Direct3D9 device
+[Tue Mar  3 19:09:06 2020] INFO: Set screen mode 800x600 windowed monitor 0 resizable multisample 2
+[Tue Mar  3 19:09:06 2020] INFO: Initialized input
+[Tue Mar  3 19:09:06 2020] INFO: Initialized user interface
+[Tue Mar  3 19:09:06 2020] DEBUG: Loading resource Textures/Ramp.png
+[Tue Mar  3 19:09:06 2020] DEBUG: Loading temporary resource Textures/Ramp.xml
+[Tue Mar  3 19:09:06 2020] DEBUG: Loading resource Textures/Spot.png
+[Tue Mar  3 19:09:06 2020] DEBUG: Loading temporary resource Textures/Spot.xml
+[Tue Mar  3 19:09:06 2020] DEBUG: Loading resource Techniques/NoTexture.xml
+[Tue Mar  3 19:09:06 2020] DEBUG: Loading resource RenderPaths/Forward.xml
+[Tue Mar  3 19:09:07 2020] INFO: Initialized renderer
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading temporary resource Textures/Ramp.xml
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading temporary resource Textures/Spot.xml
+[Tue Mar  3 19:09:07 2020] INFO: Set audio mode 22050 Hz stereo interpolated
+[Tue Mar  3 19:09:07 2020] INFO: Initialized engine
+[Tue Mar  3 19:09:07 2020] INFO: Added resource path C:/Users/danii/.aio/impl/e9ffdbfd5fc3786b7178e3f3aceeeb297e9358ea.i/
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading resource UI/DefaultStyle.xml
+[Tue Mar  3 19:09:07 2020] DEBUG: Reloading shaders
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading resource Materials/Pattern_126.xml
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading resource Techniques/DiffNormalSpec.xml
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading resource Textures/pattern_126_diffuse.tga
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading resource Textures/pattern_126_normal.tga
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading resource Textures/pattern_126_specular.tga
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading resource Models/Box.mdl
+[Tue Mar  3 19:09:07 2020] DEBUG: Loading resource Shaders/HLSL/LitSolid.hlsl
+[Tue Mar  3 19:09:07 2020] DEBUG: Loaded cached vertex shader LitSolid(NORMALMAP PERPIXEL POINTLIGHT)
+[Tue Mar  3 19:09:07 2020] DEBUG: Loaded cached pixel shader LitSolid(AMBIENT DIFFMAP NORMALMAP PERPIXEL POINTLIGHT SPECMAP SPECULAR)
+[Tue Mar  3 19:09:07 2020] DEBUG: Loaded cached vertex shader LitSolid(INSTANCED NORMALMAP PERPIXEL POINTLIGHT)
+[Tue Mar  3 19:09:08 2020] DEBUG: Window was moved to 0,56
+[Tue Mar  3 19:09:08 2020] INFO: Device lost
+[Tue Mar  3 19:09:08 2020] DEBUG: Window was resized to 3840x2104
